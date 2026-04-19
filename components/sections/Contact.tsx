@@ -66,14 +66,13 @@ export default function Contact() {
 
             <div className="space-y-4">
               <a
-                href="mailto:hello@yoursite.com"
+                href="mailto:hello@runrateops.com"
                 className="flex items-center gap-3 text-slate-700 hover:text-[oklch(0.55_0.22_250)] transition-colors group"
               >
                 <div className="w-10 h-10 rounded-lg bg-slate-100 group-hover:bg-[oklch(0.55_0.22_250)]/10 flex items-center justify-center transition-colors">
                   <Mail size={18} className="text-slate-500 group-hover:text-[oklch(0.55_0.22_250)] transition-colors" />
                 </div>
-                {/* TODO: Replace with your email */}
-                hello@yoursite.com
+                hello@runrateops.com
               </a>
               <a
                 href="https://linkedin.com"

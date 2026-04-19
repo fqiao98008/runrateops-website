@@ -61,7 +61,7 @@ export default function About() {
                 possible moments — during rapid growth.
               </p>
               <p>
-                I founded [YourBrand] to give growth-stage companies access to
+                I founded Runrate Operations to give growth-stage companies access to
                 the same operational rigor and AI-forward tooling that
                 enterprise teams take for granted. My approach is practical and
                 hands-on: I work alongside your team to identify what&apos;s

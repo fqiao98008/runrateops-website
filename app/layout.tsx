@@ -17,18 +17,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// TODO: Replace [YourBrand] with your business name throughout this file
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yoursite.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://runrateops.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "[YourBrand] | AI-Powered Finance & Operations Consulting",
-    template: "%s | [YourBrand]",
+    default: "Runrate Operations | AI-Powered Finance & Operations Consulting",
+    template: "%s | Runrate Operations",
   },
   description:
-    "Expert consulting to streamline back-office finance and operations using AI and modern software tools. Trusted by growth-stage companies to scale efficiently.",
+    "Runrate Operations helps growth-stage companies streamline back-office finance and operations using AI and modern software tools. Less manual work, faster decisions, scalable processes.",
   keywords: [
+    "Runrate Operations",
     "finance operations consulting",
     "AI back office automation",
     "GTM operations consultant",
@@ -37,31 +37,22 @@ export const metadata: Metadata = {
     "back office optimization",
     "AI tools for finance",
   ],
-  authors: [{ name: "[Your Name]" }],
-  creator: "[YourBrand]",
+  authors: [{ name: "Fang Qiao" }],
+  creator: "Runrate Operations",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    siteName: "[YourBrand]",
-    title: "[YourBrand] | AI-Powered Finance & Operations Consulting",
+    siteName: "Runrate Operations",
+    title: "Runrate Operations | AI-Powered Finance & Operations Consulting",
     description:
-      "Expert consulting to streamline back-office finance and operations using AI and modern software tools.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "[YourBrand] – Finance & Operations Consulting",
-      },
-    ],
+      "Streamline back-office finance and operations using AI and modern software tools. Trusted by growth-stage companies.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "[YourBrand] | AI-Powered Finance & Operations Consulting",
+    title: "Runrate Operations | AI-Powered Finance & Operations Consulting",
     description:
-      "Expert consulting to streamline back-office finance and operations using AI and modern software tools.",
-    images: ["/og-image.png"],
+      "Streamline back-office finance and operations using AI and modern software tools.",
   },
   robots: {
     index: true,
@@ -79,12 +70,11 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  // TODO: Replace all placeholder values below with your actual business info
-  name: "[YourBrand]",
+  name: "Runrate Operations",
   description:
     "Expert consulting to streamline back-office finance and operations using AI and modern software tools.",
   url: SITE_URL,
-  email: "hello@yoursite.com",
+  email: "hello@runrateops.com",
   areaServed: "US",
   serviceType: [
     "Finance Operations Consulting",

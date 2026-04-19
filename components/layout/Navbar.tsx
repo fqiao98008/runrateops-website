@@ -39,9 +39,8 @@ export default function Navbar() {
             href="#"
             className="text-white font-bold text-2xl tracking-tight hover:opacity-90 transition-opacity"
           >
-            {/* TODO: Replace with your business name or logo */}
-            <span className="text-[oklch(0.7_0.15_210)]">[Your</span>
-            <span>Brand]</span>
+            <span className="text-[oklch(0.7_0.15_210)]">Runrate</span>
+            <span> Ops</span>
           </a>
 
           {/* Desktop nav */}

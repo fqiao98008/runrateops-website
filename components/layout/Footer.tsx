@@ -10,9 +10,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <div className="font-bold text-xl text-white mb-3">
-              {/* TODO: Replace with your business name */}
-              <span className="text-[oklch(0.7_0.15_210)]">[Your</span>
-              <span>Brand]</span>
+              <span className="text-[oklch(0.7_0.15_210)]">Runrate</span>
+              <span> Ops</span>
             </div>
             <p className="text-sm leading-relaxed">
               Helping companies streamline back-office finance and operations
@@ -49,12 +48,11 @@ export default function Footer() {
             <h3 className="text-white font-semibold text-sm mb-4">Connect</h3>
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="mailto:hello@yoursite.com"
+                href="mailto:hello@runrateops.com"
                 className="flex items-center gap-2 hover:text-white transition-colors"
               >
                 <Mail size={16} />
-                {/* TODO: Replace with your email */}
-                hello@yoursite.com
+                hello@runrateops.com
               </a>
               <a
                 href="https://linkedin.com"
@@ -71,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-10 pt-6 text-sm text-center">
-          © {currentYear} [YourBrand]. All rights reserved.
+          © {currentYear} Runrate Operations. All rights reserved.
         </div>
       </div>
     </footer>
