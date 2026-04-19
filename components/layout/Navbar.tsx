@@ -32,12 +32,12 @@ export default function Navbar() {
           : "bg-transparent"
       )}
     >
-      <nav className="max-w-6xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <nav className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="flex items-center justify-between h-18 md:h-22">
           {/* Logo */}
           <a
             href="#"
-            className="text-white font-bold text-xl tracking-tight hover:opacity-90 transition-opacity"
+            className="text-white font-bold text-2xl tracking-tight hover:opacity-90 transition-opacity"
           >
             {/* TODO: Replace with your business name or logo */}
             <span className="text-[oklch(0.7_0.15_210)]">[Your</span>
@@ -45,19 +45,19 @@ export default function Navbar() {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white/80 hover:text-white text-sm font-medium transition-colors"
+                className="text-white/80 hover:text-white text-base font-medium transition-colors"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="bg-[oklch(0.55_0.22_250)] hover:bg-[oklch(0.48_0.22_250)] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+              className="bg-[oklch(0.55_0.22_250)] hover:bg-[oklch(0.48_0.22_250)] text-white text-base font-semibold px-6 py-3 rounded-lg transition-colors"
             >
               Book a Call
             </a>
