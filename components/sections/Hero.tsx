@@ -2,8 +2,7 @@
 
 import { ArrowRight, CheckCircle } from "lucide-react";
 
-// TODO: Replace with your Calendly URL (e.g. https://calendly.com/yourname/30min)
-const CALENDLY_URL = "https://calendly.com/yourname/30min";
+const CALENDLY_URL = "https://calendly.com/runrateoperations/30-min-discovery-call";
 
 const PROOF_POINTS = [
   "15+ years in Finance & Operations",
