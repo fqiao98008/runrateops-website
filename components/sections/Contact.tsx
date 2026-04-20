@@ -34,11 +34,27 @@ export default function Contact() {
     e.preventDefault();
     setState("submitting");
 
+    const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_URL;
+    if (!endpoint) {
+      setState("error");
+      return;
+    }
+
     try {
-      // TODO: Replace with your Formspree endpoint or preferred form handler
-      // Example: const res = await fetch("https://formspree.io/f/YOUR_ID", { method: "POST", body: JSON.stringify(form), headers: { "Content-Type": "application/json" } });
-      // Simulating submission for now
-      await new Promise((r) => setTimeout(r, 1000));
+      const res = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        setState("error");
+        return;
+      }
+
       setState("success");
       setForm(INITIAL_FORM);
     } catch {
