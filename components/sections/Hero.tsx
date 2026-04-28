@@ -1,22 +1,13 @@
 "use client";
 
 import { ArrowRight, CheckCircle } from "lucide-react";
-
-const CALENDLY_URL = "https://calendly.com/runrateoperations/30-min-discovery-call";
+import { openCalendly } from "@/lib/calendly";
 
 const PROOF_POINTS = [
   "15+ years in Finance & Operations",
   "Trusted by growth-stage companies",
   "AI-native methodology",
 ];
-
-function openCalendly() {
-  // @ts-expect-error Calendly is loaded via external script
-  if (typeof window !== "undefined" && window.Calendly) {
-    // @ts-expect-error Calendly is loaded via external script
-    window.Calendly.initPopupWidget({ url: CALENDLY_URL });
-  }
-}
 
 export default function Hero() {
   return (

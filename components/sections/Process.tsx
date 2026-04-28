@@ -1,4 +1,7 @@
+"use client";
+
 import { Phone, Map, Rocket } from "lucide-react";
+import { openCalendly } from "@/lib/calendly";
 
 const STEPS = [
   {
@@ -84,12 +87,13 @@ export default function Process() {
 
         {/* CTA */}
         <div className="text-center mt-14">
-          <a
-            href="#contact"
+          <button
+            type="button"
+            onClick={openCalendly}
             className="inline-flex items-center gap-2 bg-[oklch(0.18_0.04_251)] hover:bg-[oklch(0.25_0.05_251)] text-white font-semibold px-8 py-4 rounded-xl transition-colors"
           >
             Start with a Free Discovery Call
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { openCalendly } from "@/lib/calendly";
 
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
@@ -54,12 +55,13 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={openCalendly}
               className="bg-[oklch(0.55_0.22_250)] hover:bg-[oklch(0.48_0.22_250)] text-white text-base font-semibold px-6 py-3 rounded-lg transition-colors"
             >
               Book a Call
-            </a>
+            </button>
           </div>
 
           {/* Mobile hamburger */}
@@ -87,13 +89,16 @@ export default function Navbar() {
               </a>
             ))}
             <div className="px-4 pt-2">
-              <a
-                href="#contact"
-                onClick={handleNavClick}
-                className="block text-center bg-[oklch(0.55_0.22_250)] hover:bg-[oklch(0.48_0.22_250)] text-white font-semibold px-5 py-3 rounded-lg transition-colors"
+              <button
+                type="button"
+                onClick={() => {
+                  handleNavClick();
+                  openCalendly();
+                }}
+                className="block w-full text-center bg-[oklch(0.55_0.22_250)] hover:bg-[oklch(0.48_0.22_250)] text-white font-semibold px-5 py-3 rounded-lg transition-colors"
               >
                 Book a Call
-              </a>
+              </button>
             </div>
           </div>
         )}
