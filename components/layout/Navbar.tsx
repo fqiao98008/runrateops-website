@@ -39,8 +39,8 @@ export default function Navbar() {
             href="#"
             className="text-white font-bold text-2xl tracking-tight hover:opacity-90 transition-opacity"
           >
-            <span className="text-[oklch(0.7_0.15_210)]">Runrate</span>
-            <span> Ops</span>
+            <span className="text-[oklch(0.7_0.15_210)]">Runrate </span>
+            <span>Operations</span>
           </a>
 
           {/* Desktop nav */}

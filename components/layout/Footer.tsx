@@ -10,8 +10,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <div className="font-bold text-xl text-white mb-3">
-              <span className="text-[oklch(0.7_0.15_210)]">Runrate</span>
-              <span> Ops</span>
+              <span className="text-[oklch(0.7_0.15_210)]">Runrate </span>
+              <span>Operations</span>
             </div>
             <p className="text-sm leading-relaxed">
               Helping companies streamline back-office finance and operations
@@ -68,8 +68,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-10 pt-6 text-sm text-center">
-          © {currentYear} Runrate Operations. All rights reserved.
+        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+          <span>© {currentYear} Runrate Operations. All rights reserved.</span>
+          <a
+            href="https://claude.ai/code"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-4 py-1.5 text-white/60 hover:text-white/90 text-xs font-medium tracking-wide transition-colors"
+          >
+            <span className="text-[#da7756] text-base">✳</span>
+            POWERED BY Claude Code
+          </a>
         </div>
       </div>
     </footer>

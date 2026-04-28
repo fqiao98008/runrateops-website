@@ -18,31 +18,69 @@ const CREDENTIALS = [
   },
 ];
 
+const STATS = [
+  { value: "40%",  suffix: "",     label: "Average reduction in manual processes" },
+  { value: "3×",   suffix: "",     label: "Faster month-end close cycles" },
+  { value: "90",   suffix: "days", label: "To first measurable results" },
+  { value: "30%",  suffix: "",     label: "Average operational cost savings" },
+  { value: "100%", suffix: "",     label: "Built within your existing IT stack" },
+  { value: "15+",  suffix: "",     label: "Years in Finance & Operations" },
+];
+
 export default function About() {
   return (
     <section id="about" className="py-20 px-6 md:px-12 lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          {/* Photo placeholder */}
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <div className="aspect-square max-w-sm mx-auto lg:mx-0 rounded-3xl bg-slate-100 border border-slate-200 flex items-center justify-center overflow-hidden">
-                {/* TODO: Replace with actual photo using next/image */}
-                <div className="text-center text-slate-400">
-                  <div className="w-24 h-24 rounded-full bg-slate-200 mx-auto mb-4" />
-                  <p className="text-sm">Photo placeholder</p>
+        {/*
+          2-col × 2-row grid:
+          Row 1: stats (left) | heading + bio (right) — stretch heights match
+          Row 2: empty (left) | credential badges (right)
+        */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-10">
+
+          {/* Row 1, left col: Stats — top aligns with bio text start */}
+          <div className="order-2 lg:order-1 lg:row-start-1 flex flex-col">
+            {/* Invisible spacer mirroring the "About" label + heading on the right */}
+            <div aria-hidden="true" className="hidden lg:block invisible">
+              <p className="text-sm font-semibold uppercase tracking-wider mb-3">
+                About
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Finance & Ops Expertise, AI-Powered Results
+              </h2>
+            </div>
+
+            {/* Stats fill the remaining height, distributed to match bio text */}
+            <div className="flex-1 flex flex-col justify-between">
+              {[
+                STATS.slice(0, 2),
+                STATS.slice(2, 4),
+                STATS.slice(4, 6),
+              ].map((row, i) => (
+                <div key={i} className="flex gap-4">
+                  {row.map(({ value, suffix, label }) => (
+                    <div
+                      key={label}
+                      className="flex-1 bg-slate-50 rounded-2xl p-5 border border-slate-100"
+                    >
+                      <p className="text-3xl font-bold text-slate-900 leading-none mb-1">
+                        {value}
+                        {suffix && (
+                          <span className="text-lg font-semibold text-slate-400 ml-1">
+                            {suffix}
+                          </span>
+                        )}
+                      </p>
+                      <p className="text-slate-500 text-xs leading-snug mt-1">{label}</p>
+                    </div>
+                  ))}
                 </div>
-              </div>
-              {/* Floating credential chips */}
-              <div className="absolute -bottom-4 -right-4 md:right-0 bg-[oklch(0.18_0.04_251)] text-white rounded-2xl px-5 py-4 shadow-xl">
-                <p className="text-2xl font-bold">15+</p>
-                <p className="text-white/70 text-xs">Years Experience</p>
-              </div>
+              ))}
             </div>
           </div>
 
-          {/* Content */}
-          <div className="order-1 lg:order-2">
+          {/* Row 1, right col: Heading + bio text */}
+          <div className="order-1 lg:order-2 lg:row-start-1">
             <p className="text-sm font-semibold text-[oklch(0.55_0.22_250)] uppercase tracking-wider mb-3">
               About
             </p>
@@ -52,31 +90,32 @@ export default function About() {
                 AI-Powered Results
               </span>
             </h2>
-            <div className="space-y-4 text-slate-600 leading-relaxed mb-8">
+            <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                {/* TODO: Replace with your actual bio */}
                 With over 15 years working at the intersection of finance,
-                operations, and go-to-market strategy, I&apos;ve seen firsthand
+                operations, and go-to-market strategy, we&apos;ve seen firsthand
                 how back-office inefficiencies slow companies down at the worst
                 possible moments — during rapid growth.
               </p>
               <p>
-                I founded Runrate Operations to give growth-stage companies access to
+                We founded Runrate Operations to give growth-stage companies access to
                 the same operational rigor and AI-forward tooling that
-                enterprise teams take for granted. My approach is practical and
-                hands-on: I work alongside your team to identify what&apos;s
+                enterprise teams take for granted. Our approach is practical and
+                hands-on: we work alongside your team to identify what&apos;s
                 slowing you down, implement the right solutions, and ensure
                 adoption actually happens.
               </p>
               <p>
                 Whether you&apos;re preparing for a funding round, scaling a new
                 GTM motion, or simply tired of month-end close taking three
-                weeks, I can help you build a back office that becomes a
+                weeks, we can help you build a back office that becomes a
                 competitive advantage.
               </p>
             </div>
+          </div>
 
-            {/* Credential badges */}
+          {/* Row 2, right col only: Credential badges */}
+          <div className="order-3 lg:col-start-2 lg:row-start-2">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {CREDENTIALS.map((cred) => {
                 const Icon = cred.icon;
@@ -85,19 +124,15 @@ export default function About() {
                     key={cred.label}
                     className="bg-slate-50 rounded-xl p-4 border border-slate-100"
                   >
-                    <Icon
-                      size={20}
-                      className="text-[oklch(0.55_0.22_250)] mb-2"
-                    />
-                    <p className="font-semibold text-slate-900 text-sm">
-                      {cred.label}
-                    </p>
+                    <Icon size={20} className="text-[oklch(0.55_0.22_250)] mb-2" />
+                    <p className="font-semibold text-slate-900 text-sm">{cred.label}</p>
                     <p className="text-slate-500 text-xs mt-0.5">{cred.detail}</p>
                   </div>
                 );
               })}
             </div>
           </div>
+
         </div>
       </div>
     </section>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark navy background -->
+  <rect width="32" height="32" rx="7" fill="#0e1829"/>
+
+  <!-- Orbit arc: ~290° visible, ~70° gap near top-right -->
+  <!-- circumference = 2π×9 ≈ 56.55 | 290° dash ≈ 45.6 | 70° gap ≈ 11 -->
+  <circle
+    cx="16" cy="16" r="9"
+    fill="none"
+    stroke="#4dcce8"
+    stroke-width="1.8"
+    stroke-dasharray="45.6 11"
+    stroke-linecap="round"
+    transform="rotate(340, 16, 16)"
+  />
+
+  <!-- Center mass -->
+  <circle cx="16" cy="16" r="4.5" fill="#2563eb"/>
+
+  <!-- Orbiting node at 12 o'clock (top of orbit) -->
+  <circle cx="16" cy="7" r="2.2" fill="#22d3ee"/>
+</svg>

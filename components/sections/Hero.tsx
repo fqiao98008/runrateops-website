@@ -40,11 +40,16 @@ export default function Hero() {
       />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-8 pt-32 pb-24 md:pt-40 md:pb-32 w-full text-center">
-        {/* Tag line */}
-        <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-white/80 mb-8">
-          <span className="w-2 h-2 rounded-full bg-[oklch(0.7_0.15_210)] animate-pulse" />
-          Finance & Operations Consulting
-        </div>
+        {/* Powered by Claude Code badge */}
+        <a
+          href="https://claude.ai/code"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 rounded-full px-4 py-1.5 text-sm text-white/80 hover:text-white mb-8 transition-colors"
+        >
+          <span className="text-[#da7756] text-base leading-none">✳</span>
+          POWERED BY Claude Code
+        </a>
 
         {/* Headline — sized to fit on one line at desktop widths */}
         <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 whitespace-nowrap">
